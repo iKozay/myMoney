@@ -7,6 +7,8 @@ import 'package:myapp/database/tblModel.dart';
 import 'package:myapp/utils.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
+import 'EditTransaction.dart';
+
 class TransactionPage extends StatefulWidget {
   const TransactionPage({super.key});
 
@@ -74,7 +76,10 @@ class TransactionPageState extends State<TransactionPage> {
                           ),
                           SlidableAction(
                             onPressed: (BuildContext context) {
-                                print("Edit");
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => const EditTransaction()),
+                              );
                             },
                             backgroundColor: Color(0xFF21B7CA),
                             foregroundColor: Colors.white,
