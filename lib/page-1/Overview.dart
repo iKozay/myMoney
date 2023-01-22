@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/page-1/Overview.dart';
 import 'package:myapp/utils.dart';
 
 class Overview extends StatefulWidget {
@@ -20,553 +21,482 @@ class OverviewState extends State<Overview> {
     return Container(
       width: double.infinity,
       child: Container(
-        // rayanePuw (3:23)
+        // rayane2w8R (11:614)
+        padding: EdgeInsets.fromLTRB(74*fem, 238*fem, 74.83*fem, 401.3*fem),
         width: double.infinity,
+        height: 844*fem,
         decoration: BoxDecoration (
           color: Color(0xff2e2e2e),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              // autogroupkugqsaD (FrB6QKhczy6KmAoLsiKuGq)
-              padding: EdgeInsets.fromLTRB(10*fem, 22*fem, 0*fem, 114*fem),
-              width: double.infinity,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    // datetextv2h (11:612)
-                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 80*fem),
-                    width: double.infinity,
-                    child: Text(
-                      'January 2022',
-                      textAlign: TextAlign.center,
-                      style: SafeGoogleFont (
-                        'SF Pro Rounded',
-                        fontSize: 20.8384628296*ffem,
-                        fontWeight: FontWeight.w600,
-                        height: 1.0476191348*ffem/fem,
-                        color: Color(0xffb5b7c0),
+        child: Container(
+          // chartQnh (11:616)
+          width: double.infinity,
+          height: double.infinity,
+          child: Stack(
+              children: [
+                Positioned(
+                  // groupTFB (11:618)
+                  left: 125.9196777344*fem,
+                  top: 65.580078125*fem,
+                  child: Align(
+                    child: SizedBox(
+                      width: 76.51*fem,
+                      height: 39.24*fem,
+                      child: Image.asset(
+                        'assets/page-1/images/group-EVj.png',
+                        width: 76.51*fem,
+                        height: 39.24*fem,
                       ),
                     ),
                   ),
-                  Container(
-                    // frame7wyP (I11:564;11:145)
-                    margin: EdgeInsets.fromLTRB(56*fem, 0*fem, 0*fem, 15.85*fem),
-                    width: 421.31*fem,
-                    height: 348.15*fem,
-                    child: Container(
-                      // chart7RNm (I11:564;11:145;482:1114)
-                      padding: EdgeInsets.fromLTRB(71*fem, 64.5*fem, 71*fem, 78.39*fem),
-                      width: 258*fem,
-                      height: 258*fem,
-                      decoration: BoxDecoration (
-                        image: DecorationImage (
-                          fit: BoxFit.cover,
-                          image: AssetImage (
-                            'assets/page-1/images/ellipse-a1s.png',
-                          ),
-                        ),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            // totaltvZ (I11:564;11:145;482:1114;482:481)
-                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 8.93*fem, 49.11*fem),
-                            constraints: BoxConstraints (
-                              maxWidth: 88*fem,
-                            ),
-                            child: Text(
-                              'Jan 2022\nYou spent',
-                              textAlign: TextAlign.center,
-                              style: SafeGoogleFont (
-                                'SF Pro Rounded',
-                                fontSize: 20.8384628296*ffem,
-                                fontWeight: FontWeight.w600,
-                                height: 1.0476191348*ffem/fem,
-                                color: Color(0xffb5b7c0),
-                              ),
-                            ),
-                          ),
-                          Center(
-                            // KFB (I11:564;11:145;482:1114;482:480)
-                            child: Text(
-                              '100\$',
-                              textAlign: TextAlign.center,
-                              style: SafeGoogleFont (
-                                'SF Pro Rounded',
-                                fontSize: 58.5461578369*ffem,
-                                fontWeight: FontWeight.w600,
-                                height: 0.3728813846*ffem/fem,
-                                letterSpacing: -1.1709231567*fem,
-                                color: Color(0xffffffff),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    // group20NUM (11:258)
-                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2*fem),
-                    padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 2.53*fem, 0*fem),
-                    width: 896*fem,
-                    decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(100*fem),
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          // unsplashcpccybprfayU9 (11:263)
-                          margin: EdgeInsets.fromLTRB(0*fem, 3*fem, 11.53*fem, 0*fem),
-                          width: 21*fem,
-                          height: 21*fem,
-                          decoration: BoxDecoration (
-                            borderRadius: BorderRadius.circular(100*fem),
-                            gradient: RadialGradient (
-                              center: Alignment(-0, -0),
-                              radius: 0.5,
-                              colors: <Color>[Color(0xff79ffbe), Color(0xffb163ff)],
-                              stops: <double>[0, 1],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // timhortonsz8M (11:259)
-                          margin: EdgeInsets.fromLTRB(0*fem, 1*fem, 18.97*fem, 0*fem),
-                          child: Text(
-                            'Tim Hortons',
-                            style: SafeGoogleFont (
-                              'Poppins',
-                              fontSize: 18*ffem,
-                              fontWeight: FontWeight.w500,
-                              height: 1.5*ffem/fem,
-                              letterSpacing: -0.18*fem,
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // jan102022EYV (11:260)
-                          margin: EdgeInsets.fromLTRB(0*fem, 1*fem, 31.43*fem, 0*fem),
-                          child: Text(
-                            'Jan 10 2022',
-                            style: SafeGoogleFont (
-                              'Poppins',
-                              fontSize: 18*ffem,
-                              fontWeight: FontWeight.w400,
-                              height: 1.5*ffem/fem,
-                              letterSpacing: -0.18*fem,
-                              color: Color(0xffb5b7c0),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // 5p1 (11:261)
-                          margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 507.54*fem, 0*fem),
-                          child: Text(
-                            '- 45.99\$',
-                            style: SafeGoogleFont (
-                              'Poppins',
-                              fontSize: 18*ffem,
-                              fontWeight: FontWeight.w600,
-                              height: 1.5*ffem/fem,
-                              letterSpacing: -0.18*fem,
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // x77 (11:262)
-                          margin: EdgeInsets.fromLTRB(0*fem, 19*fem, 0*fem, 0*fem),
-                          child: Text(
-                            '20',
-                            style: SafeGoogleFont (
-                              'Poppins',
-                              fontSize: 16*ffem,
-                              fontWeight: FontWeight.w400,
-                              height: 1.5*ffem/fem,
-                              letterSpacing: -0.16*fem,
-                              color: Color(0xff303030),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    // group211r5 (11:270)
-                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2*fem),
-                    padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 2.54*fem, 0*fem),
-                    width: 896*fem,
-                    decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(100*fem),
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          // unsplashcpccybprfa3Gy (11:290)
-                          margin: EdgeInsets.fromLTRB(0*fem, 4*fem, 11.16*fem, 0*fem),
-                          width: 21.01*fem,
-                          height: 21*fem,
-                          decoration: BoxDecoration (
-                            borderRadius: BorderRadius.circular(100*fem),
-                            gradient: RadialGradient (
-                              center: Alignment(-0, -0),
-                              radius: 0.5,
-                              colors: <Color>[Color(0xff79ffbe), Color(0xffb163ff)],
-                              stops: <double>[0, 1],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // ps5UFo (11:271)
-                          margin: EdgeInsets.fromLTRB(0*fem, 1*fem, 93.02*fem, 0*fem),
-                          child: Text(
-                            'PS5',
-                            style: SafeGoogleFont (
-                              'Poppins',
-                              fontSize: 18*ffem,
-                              fontWeight: FontWeight.w500,
-                              height: 1.5*ffem/fem,
-                              letterSpacing: -0.18*fem,
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // jan1220228bF (11:272)
-                          margin: EdgeInsets.fromLTRB(0*fem, 1*fem, 26.93*fem, 0*fem),
-                          child: Text(
-                            'Jan 12 2022',
-                            style: SafeGoogleFont (
-                              'Poppins',
-                              fontSize: 18*ffem,
-                              fontWeight: FontWeight.w400,
-                              height: 1.5*ffem/fem,
-                              letterSpacing: -0.18*fem,
-                              color: Color(0xffb5b7c0),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // Q2y (11:273)
-                          margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 506.34*fem, 0*fem),
-                          child: Text(
-                            '- 145.99\$',
-                            style: SafeGoogleFont (
-                              'Poppins',
-                              fontSize: 18*ffem,
-                              fontWeight: FontWeight.w600,
-                              height: 1.5*ffem/fem,
-                              letterSpacing: -0.18*fem,
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // TX3 (11:274)
-                          margin: EdgeInsets.fromLTRB(0*fem, 19*fem, 0*fem, 0*fem),
-                          child: Text(
-                            '20',
-                            style: SafeGoogleFont (
-                              'Poppins',
-                              fontSize: 16*ffem,
-                              fontWeight: FontWeight.w400,
-                              height: 1.5*ffem/fem,
-                              letterSpacing: -0.16*fem,
-                              color: Color(0xff303030),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    // group22X17 (11:277)
-                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2*fem),
-                    padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 2.53*fem, 0*fem),
-                    width: 896*fem,
-                    decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(100*fem),
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          // unsplashcpccybprfaAJy (11:291)
-                          margin: EdgeInsets.fromLTRB(0*fem, 4*fem, 11.53*fem, 0*fem),
-                          width: 21*fem,
-                          height: 21*fem,
-                          decoration: BoxDecoration (
-                            borderRadius: BorderRadius.circular(100*fem),
-                            gradient: RadialGradient (
-                              center: Alignment(-0, -0),
-                              radius: 0.5,
-                              colors: <Color>[Color(0xff79ffbe), Color(0xffb163ff)],
-                              stops: <double>[0, 1],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // timhortonsnr9 (11:278)
-                          margin: EdgeInsets.fromLTRB(0*fem, 1*fem, 18.97*fem, 0*fem),
-                          child: Text(
-                            'Tim Hortons',
-                            style: SafeGoogleFont (
-                              'Poppins',
-                              fontSize: 18*ffem,
-                              fontWeight: FontWeight.w500,
-                              height: 1.5*ffem/fem,
-                              letterSpacing: -0.18*fem,
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // jan102022TBb (11:279)
-                          margin: EdgeInsets.fromLTRB(0*fem, 1*fem, 31.43*fem, 0*fem),
-                          child: Text(
-                            'Jan 10 2022',
-                            style: SafeGoogleFont (
-                              'Poppins',
-                              fontSize: 18*ffem,
-                              fontWeight: FontWeight.w400,
-                              height: 1.5*ffem/fem,
-                              letterSpacing: -0.18*fem,
-                              color: Color(0xffb5b7c0),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // KDo (11:280)
-                          margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 507.54*fem, 0*fem),
-                          child: Text(
-                            '- 45.99\$',
-                            style: SafeGoogleFont (
-                              'Poppins',
-                              fontSize: 18*ffem,
-                              fontWeight: FontWeight.w600,
-                              height: 1.5*ffem/fem,
-                              letterSpacing: -0.18*fem,
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // PzM (11:281)
-                          margin: EdgeInsets.fromLTRB(0*fem, 19*fem, 0*fem, 0*fem),
-                          child: Text(
-                            '20',
-                            style: SafeGoogleFont (
-                              'Poppins',
-                              fontSize: 16*ffem,
-                              fontWeight: FontWeight.w400,
-                              height: 1.5*ffem/fem,
-                              letterSpacing: -0.16*fem,
-                              color: Color(0xff303030),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    // transaction4HK3 (11:283)
-                    padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 2.54*fem, 0*fem),
-                    width: 896*fem,
-                    decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(100*fem),
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          // unsplashcpccybprfaifF (11:292)
-                          margin: EdgeInsets.fromLTRB(0*fem, 3*fem, 11.16*fem, 0*fem),
-                          width: 21.01*fem,
-                          height: 21*fem,
-                          decoration: BoxDecoration (
-                            borderRadius: BorderRadius.circular(100*fem),
-                            gradient: RadialGradient (
-                              center: Alignment(-0, -0),
-                              radius: 0.5,
-                              colors: <Color>[Color(0xff79ffbe), Color(0xffb163ff)],
-                              stops: <double>[0, 1],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // ps58DB (11:284)
-                          margin: EdgeInsets.fromLTRB(0*fem, 1*fem, 93.02*fem, 0*fem),
-                          child: Text(
-                            'PS5',
-                            style: SafeGoogleFont (
-                              'Poppins',
-                              fontSize: 18*ffem,
-                              fontWeight: FontWeight.w500,
-                              height: 1.5*ffem/fem,
-                              letterSpacing: -0.18*fem,
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // jan122022bMf (11:285)
-                          margin: EdgeInsets.fromLTRB(0*fem, 1*fem, 26.93*fem, 0*fem),
-                          child: Text(
-                            'Jan 12 2022',
-                            style: SafeGoogleFont (
-                              'Poppins',
-                              fontSize: 18*ffem,
-                              fontWeight: FontWeight.w400,
-                              height: 1.5*ffem/fem,
-                              letterSpacing: -0.18*fem,
-                              color: Color(0xffb5b7c0),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // TPs (11:286)
-                          margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 506.34*fem, 0*fem),
-                          child: Text(
-                            '- 145.99\$',
-                            style: SafeGoogleFont (
-                              'Poppins',
-                              fontSize: 18*ffem,
-                              fontWeight: FontWeight.w600,
-                              height: 1.5*ffem/fem,
-                              letterSpacing: -0.18*fem,
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          // jMP (11:287)
-                          margin: EdgeInsets.fromLTRB(0*fem, 19*fem, 0*fem, 0*fem),
-                          child: Text(
-                            '20',
-                            style: SafeGoogleFont (
-                              'Poppins',
-                              fontSize: 16*ffem,
-                              fontWeight: FontWeight.w400,
-                              height: 1.5*ffem/fem,
-                              letterSpacing: -0.16*fem,
-                              color: Color(0xff303030),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              // autogroupuyc9DXT (FrB5dgKLu1LRjt8U44uyc9)
-              width: double.infinity,
-              height: 64*fem,
-              decoration: BoxDecoration (
-                gradient: LinearGradient (
-                  begin: Alignment(-0.494, 10.55),
-                  end: Alignment(0.494, -10.55),
-                  colors: <Color>[Color(0xff1f1f1f), Color(0xff2f2f2f)],
-                  stops: <double>[0, 1],
                 ),
-              ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    // autogroupwsvjdLH (FrB5rWHJbg5Z7ThiDrwSVj)
-                    padding: EdgeInsets.fromLTRB(23*fem, 12*fem, 22*fem, 17*fem),
-                    height: double.infinity,
-                    decoration: BoxDecoration (
-                      gradient: LinearGradient (
-                        begin: Alignment(-0.494, 10.55),
-                        end: Alignment(0.494, -10.55),
-                        colors: <Color>[Color(0xff2f2f2f), Color(0xff2f2f2f)],
-                        stops: <double>[0, 1],
-                      ),
-                    ),
-                    child: Center(
-                      // pieiconFMf (8:176)
-                      child: SizedBox(
-                        width: 35*fem,
-                        height: 35*fem,
-                        child: Image.asset(
-                          'assets/page-1/images/pie-icon-uc1.png',
-                          fit: BoxFit.cover,
-                        ),
+                Positioned(
+                  // groupt5b (11:620)
+                  left: 125.7724609375*fem,
+                  top: 60.7567138672*fem,
+                  child: Align(
+                    child: SizedBox(
+                      width: 66.38*fem,
+                      height: 42.1*fem,
+                      child: Image.asset(
+                        'assets/page-1/images/group-med.png',
+                        width: 66.38*fem,
+                        height: 42.1*fem,
                       ),
                     ),
                   ),
-                  Container(
-                    // autogroupwjzdXpy (FrB61kWu6cNKyHdRhFwjzd)
-                    padding: EdgeInsets.fromLTRB(20*fem, 12*fem, 24*fem, 17*fem),
-                    height: double.infinity,
-                    child: Row(
+                ),
+                Positioned(
+                  // groupWcm (11:622)
+                  left: 122.7438964844*fem,
+                  top: 25.0631103516*fem,
+                  child: Align(
+                    child: SizedBox(
+                      width: 66.46*fem,
+                      height: 77.56*fem,
+                      child: Image.asset(
+                        'assets/page-1/images/group-vW1.png',
+                        width: 66.46*fem,
+                        height: 77.56*fem,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  // groupCEh (11:624)
+                  left: 62.8657226562*fem,
+                  top: 24.8225097656*fem,
+                  child: Align(
+                    child: SizedBox(
+                      width: 65.77*fem,
+                      height: 77.33*fem,
+                      child: Image.asset(
+                        'assets/page-1/images/group-9fB.png',
+                        width: 65.77*fem,
+                        height: 77.33*fem,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  // groupUT7 (11:626)
+                  left: 42.8093261719*fem,
+                  top: 51.421875*fem,
+                  child: Align(
+                    child: SizedBox(
+                      width: 76.65*fem,
+                      height: 53.01*fem,
+                      child: Image.asset(
+                        'assets/page-1/images/group-91F.png',
+                        width: 76.65*fem,
+                        height: 53.01*fem,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  // groupjtq (11:628)
+                  left: 42.4338378906*fem,
+                  top: 97.0821533203*fem,
+                  child: Align(
+                    child: SizedBox(
+                      width: 76.19*fem,
+                      height: 32.13*fem,
+                      child: Image.asset(
+                        'assets/page-1/images/group-L9j.png',
+                        width: 76.19*fem,
+                        height: 32.13*fem,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  // groupCnR (11:630)
+                  left: 46.2426757812*fem,
+                  top: 106.0421142578*fem,
+                  child: Align(
+                    child: SizedBox(
+                      width: 73.52*fem,
+                      height: 58.28*fem,
+                      child: Image.asset(
+                        'assets/page-1/images/group-2p5.png',
+                        width: 73.52*fem,
+                        height: 58.28*fem,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  // groupfR7 (11:632)
+                  left: 68.9621582031*fem,
+                  top: 107.7977294922*fem,
+                  child: Align(
+                    child: SizedBox(
+                      width: 52.72*fem,
+                      height: 75.62*fem,
+                      child: Image.asset(
+                        'assets/page-1/images/group-Y7w.png',
+                        width: 52.72*fem,
+                        height: 75.62*fem,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  // groupKkZ (11:634)
+                  left: 107.4943847656*fem,
+                  top: 107.9110107422*fem,
+                  child: Align(
+                    child: SizedBox(
+                      width: 65.78*fem,
+                      height: 76.91*fem,
+                      child: Image.asset(
+                        'assets/page-1/images/group-P4R.png',
+                        width: 65.78*fem,
+                        height: 76.91*fem,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  // group9Do (11:636)
+                  left: 124.9758300781*fem,
+                  top: 105.1657714844*fem,
+                  child: Align(
+                    child: SizedBox(
+                      width: 77.16*fem,
+                      height: 61.43*fem,
+                      child: Image.asset(
+                        'assets/page-1/images/group-2Vb.png',
+                        width: 77.16*fem,
+                        height: 61.43*fem,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  // groupapu (11:638)
+                  left: 126.4191894531*fem,
+                  top: 104.8225097656*fem,
+                  child: Align(
+                    child: SizedBox(
+                      width: 76.01*fem,
+                      height: 6.87*fem,
+                      child: Image.asset(
+                        'assets/page-1/images/group.png',
+                        width: 76.01*fem,
+                        height: 6.87*fem,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  // group3Ch (11:640)
+                  left: 0*fem,
+                  top: 0*fem,
+                  child: Container(
+                    width: 241.17*fem,
+                    height: 204.7*fem,
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                          // categoriesicond7K (8:180)
-                          width: 35*fem,
-                          height: 35*fem,
-                          child: Image.asset(
-                            'assets/page-1/images/categories-icon-BsK.png',
-                            fit: BoxFit.cover,
+                          // autogroupd1k3JPX (FrBGHd4hDTdxcpAW5rD1K3)
+                          margin: EdgeInsets.fromLTRB(64.23*fem, 0*fem, 44.96*fem, 4.82*fem),
+                          width: double.infinity,
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Container(
+                                // groupmnu (11:650)
+                                margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 70.38*fem, 5.34*fem),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      // s5F (11:652)
+                                      '961',
+                                      textAlign: TextAlign.right,
+                                      style: SafeGoogleFont (
+                                        'Inter',
+                                        fontSize: 12*ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125*ffem/fem,
+                                        color: Color(0xff80cf64),
+                                      ),
+                                    ),
+                                    Container(
+                                      // vectorwqo (11:651)
+                                      margin: EdgeInsets.fromLTRB(0*fem, 12*fem, 0*fem, 0*fem),
+                                      width: 7.44*fem,
+                                      height: 18.56*fem,
+                                      child: Image.asset(
+                                        'assets/page-1/images/vector-9HF.png',
+                                        width: 7.44*fem,
+                                        height: 18.56*fem,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                // groupot1 (11:647)
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      // vectorYKo (11:648)
+                                      margin: EdgeInsets.fromLTRB(0*fem, 12*fem, 0*fem, 0*fem),
+                                      width: 10.15*fem,
+                                      height: 17.23*fem,
+                                      child: Image.asset(
+                                        'assets/page-1/images/vector-hbB.png',
+                                        width: 10.15*fem,
+                                        height: 17.23*fem,
+                                      ),
+                                    ),
+                                    Text(
+                                      // 2Ey (11:649)
+                                      '953',
+                                      style: SafeGoogleFont (
+                                        'Inter',
+                                        fontSize: 12*ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125*ffem/fem,
+                                        color: Color(0xff80cf64),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                        SizedBox(
-                          width: 42*fem,
-                        ),
                         Container(
-                          // goalsiconi8m (8:186)
-                          width: 35*fem,
-                          height: 35*fem,
-                          child: Image.asset(
-                            'assets/page-1/images/goals-icon.png',
-                            fit: BoxFit.cover,
+                          // autogroupgnz1AEh (FrBGdcVPKbHo1u2oeSGnz1)
+                          margin: EdgeInsets.fromLTRB(7.88*fem, 0*fem, 0*fem, 12.58*fem),
+                          width: double.infinity,
+                          height: 43.82*fem,
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                // groupd8H (11:653)
+                                margin: EdgeInsets.fromLTRB(0*fem, 11.88*fem, 141.53*fem, 11.89*fem),
+                                height: double.infinity,
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: [
+                                    Container(
+                                      // K17 (11:655)
+                                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 5.04*fem),
+                                      child: Text(
+                                        '664',
+                                        textAlign: TextAlign.right,
+                                        style: SafeGoogleFont (
+                                          'Inter',
+                                          fontSize: 12*ffem,
+                                          fontWeight: FontWeight.w400,
+                                          height: 1.2125*ffem/fem,
+                                          color: Color(0xff80cf64),
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      // vectoraSq (11:654)
+                                      width: 18.31*fem,
+                                      height: 8.04*fem,
+                                      child: Image.asset(
+                                        'assets/page-1/images/vector.png',
+                                        width: 18.31*fem,
+                                        height: 8.04*fem,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                // autogroupvhbbTFj (FrBGnMjp7mtUKFHZaZvhbB)
+                                width: 50.45*fem,
+                                height: double.infinity,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      // groupm1X (11:644)
+                                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 19.38*fem, 4.33*fem),
+                                      width: double.infinity,
+                                      child: Row(
+                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        children: [
+                                          Container(
+                                            // vectorrof (11:645)
+                                            width: 17.07*fem,
+                                            height: 10.42*fem,
+                                            child: Image.asset(
+                                              'assets/page-1/images/vector-CFF.png',
+                                              width: 17.07*fem,
+                                              height: 10.42*fem,
+                                            ),
+                                          ),
+                                          Container(
+                                            // xLu (11:646)
+                                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 7.42*fem),
+                                            child: Text(
+                                              '74',
+                                              style: SafeGoogleFont (
+                                                'Inter',
+                                                fontSize: 12*ffem,
+                                                fontWeight: FontWeight.w400,
+                                                height: 1.2125*ffem/fem,
+                                                color: Color(0xff80cf64),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      // groupqQh (11:641)
+                                      margin: EdgeInsets.fromLTRB(9.1*fem, 0*fem, 0*fem, 0*fem),
+                                      width: double.infinity,
+                                      child: Row(
+                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        children: [
+                                          Container(
+                                            // vectorvS9 (11:642)
+                                            width: 19.35*fem,
+                                            height: 5.07*fem,
+                                            child: Image.asset(
+                                              'assets/page-1/images/vector-Fyw.png',
+                                              width: 19.35*fem,
+                                              height: 5.07*fem,
+                                            ),
+                                          ),
+                                          Container(
+                                            // d5f (11:643)
+                                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2.07*fem),
+                                            child: Text(
+                                              '537',
+                                              style: SafeGoogleFont (
+                                                'Inter',
+                                                fontSize: 12*ffem,
+                                                fontWeight: FontWeight.w400,
+                                                height: 1.2125*ffem/fem,
+                                                color: Color(0xff80cf64),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                        SizedBox(
-                          width: 42*fem,
-                        ),
                         Container(
-                          // statsiconD5X (8:178)
-                          width: 35*fem,
-                          height: 35*fem,
-                          child: Image.asset(
-                            'assets/page-1/images/stats-icon-rtm.png',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 42*fem,
-                        ),
-                        Container(
-                          // settingsiconKPT (8:182)
-                          width: 35*fem,
-                          height: 35*fem,
-                          child: Image.asset(
-                            'assets/page-1/images/settings-icon.png',
-                            fit: BoxFit.cover,
+                          // autogroup4ql1h5X (FrBHDRrNXu4wuWpGTM4qL1)
+                          margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.82*fem, 20.91*fem),
+                          width: double.infinity,
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                // groupNhT (11:656)
+                                margin: EdgeInsets.fromLTRB(0*fem, 6.33*fem, 159.47*fem, 0*fem),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: [
+                                    Text(
+                                      // UkV (11:658)
+                                      '426',
+                                      textAlign: TextAlign.right,
+                                      style: SafeGoogleFont (
+                                        'Inter',
+                                        fontSize: 12*ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125*ffem/fem,
+                                        color: Color(0xff80cf64),
+                                      ),
+                                    ),
+                                    Container(
+                                      // vectoraYd (11:657)
+                                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 3*fem),
+                                      width: 19.89*fem,
+                                      height: 2.13*fem,
+                                      child: Image.asset(
+                                        'assets/page-1/images/vector-FAm.png',
+                                        width: 19.89*fem,
+                                        height: 2.13*fem,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                // groupTcR (11:671)
+                                margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 6.33*fem),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: [
+                                    Container(
+                                      // vectormd7 (11:672)
+                                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 3*fem),
+                                      width: 19.98*fem,
+                                      height: 0.86*fem,
+                                      child: Image.asset(
+                                        'assets/page-1/images/vector-MM7.png',
+                                        width: 19.98*fem,
+                                        height: 0.86*fem,
+                                      ),
+                                    ),
+                                    Text(
+                                      // 4s7 (11:673)
+                                      '90',
+                                      style: SafeGoogleFont (
+                                        'Inter',
+                                        fontSize: 12*ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2125*ffem/fem,
+                                        color: Color(0xff80cf64),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ],
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
-      ),
-          );
+      );
   }
 }
