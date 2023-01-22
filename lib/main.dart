@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/database/CategoriesModel.dart';
 import 'package:myapp/page-1/Goals.dart';
 import 'package:myapp/page-1/Overview1.dart';
+import 'package:myapp/page-1/SettingsPage.dart';
 import 'package:myapp/page-1/stats_page.dart';
 import 'package:myapp/utils.dart';
 import 'package:myapp/page-1/TransactionPage.dart';
@@ -31,7 +32,7 @@ class _MyApp extends State<HomePage> {
 		const TransactionPage(),
 		const Goals(),
 		const StatsPage(),
-		const Placeholder(),
+		const SettingsPage(),
 	];
 
 	@override
