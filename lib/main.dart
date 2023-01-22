@@ -4,7 +4,8 @@ import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/page-1/Overview1.dart';
 import 'package:myapp/utils.dart';
-import 'package:myapp/page-1/CategoryPage.dart';
+import 'package:myapp/page-1/TransactionPage.dart';
+import 'package:myapp/database/tblModel.dart';
 import 'package:myapp/page-1/Overview.dart';
 import 'package:myapp/page-1/Overview1.dart';
 
@@ -24,7 +25,7 @@ class _MyApp extends State<HomePage> {
 	int selectedPage = 0;
 
 	final _pageOptions = [
-		const CategoryPage(),
+		const TransactionPage(),
 		const Overview1(),
 	];
 
