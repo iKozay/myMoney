@@ -4,7 +4,6 @@ import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
 import 'package:myapp/page-1/CategoryPage.dart';
-import 'package:myapp/page-1/Overview.dart';
 
 // import 'package:myapp/page-1/rectangle-3.dart';
 // import 'package:myapp/page-1/ellipse-1.dart';
@@ -58,7 +57,6 @@ class _MyApp extends State<HomePage> {
 
 	final _pageOptions = [
 		const CategoryPage(),
-		const Overview(),
 	];
 
 	@override
