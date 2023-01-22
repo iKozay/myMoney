@@ -32,9 +32,30 @@ class TransactionPageState extends State<TransactionPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
+          Padding(
             padding: EdgeInsets.only(left:10, bottom:10, top: 20),
-            child: Text("Transactions", style: TextStyle(color: Color(0xffffffff), fontSize: 26,),textAlign: TextAlign.left,),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+//              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Expanded(flex:5,child: Text("Transactions", style: TextStyle(color: Color(0xffffffff), fontSize: 26,),textAlign: TextAlign.left,)),
+                Expanded(
+                  child: IconButton(
+                    icon: const Icon(Icons.add, size: 40,),
+                    color: Colors.white,
+                    onPressed: () {
+                      setState(() {
+                        tblModel newTransaction = tblModel(tblModel.list.last.id+1,"Transaction",0,DateTime.now(),1);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => EditTransaction(selectedTransaction: newTransaction,)),
+                        );
+                      });
+                    },
+                  ),
+                ),
+              ],
+            ),
           ),
           Center(
             child: SfCircularChart(
@@ -94,7 +115,7 @@ class TransactionPageState extends State<TransactionPage> {
                             onPressed: (BuildContext context) {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => const EditTransaction()),
+                                MaterialPageRoute(builder: (context) => EditTransaction(selectedTransaction: tblModel.list[index])),
                               );
                             },
                             backgroundColor: Color(0xFF21B7CA),
