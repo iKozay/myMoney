@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/page-1/Goals.dart';
 import 'package:myapp/page-1/Overview1.dart';
 import 'package:myapp/page-1/stats_page.dart';
 import 'package:myapp/utils.dart';
@@ -27,7 +28,7 @@ class _MyApp extends State<HomePage> {
 
 	final _pageOptions = [
 		const TransactionPage(),
-		const Placeholder(),
+		const Goals(),
 		const StatsPage(),
 		const Placeholder(),
 	];
