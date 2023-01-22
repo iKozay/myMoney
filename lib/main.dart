@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/page-1/Overview1.dart';
+import 'package:myapp/page-1/stats_page.dart';
 import 'package:myapp/utils.dart';
 import 'package:myapp/page-1/TransactionPage.dart';
 import 'package:myapp/database/tblModel.dart';
@@ -26,7 +27,9 @@ class _MyApp extends State<HomePage> {
 
 	final _pageOptions = [
 		const TransactionPage(),
-		const Overview1(),
+		const Placeholder(),
+		const StatsPage(),
+		const Placeholder(),
 	];
 
 	@override
@@ -39,14 +42,9 @@ class _MyApp extends State<HomePage> {
 		primarySwatch: Colors.blue,
 		),
 		home: Scaffold(
-			body: _pageOptions[0],
+			body: _pageOptions[selectedPage],
 			bottomNavigationBar: BottomNavigationBar(
 				items: const [
-					BottomNavigationBarItem(
-						backgroundColor: Color(0xff272727),
-						icon: Icon(Icons.pie_chart_rounded, size: 30),
-						label: '',
-					),
 					BottomNavigationBarItem(
 						backgroundColor: Color(0xff272727),
 						icon: Icon(Icons.list_alt_rounded, size: 30),
