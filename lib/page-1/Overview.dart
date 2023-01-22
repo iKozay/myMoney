@@ -4,7 +4,14 @@ import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
 
-class Scene extends StatelessWidget {
+class Overview extends StatefulWidget {
+  const Overview({super.key});
+
+  @override
+  OverviewState createState() => OverviewState();
+}
+
+class OverviewState extends State<Overview> {
   @override
   Widget build(BuildContext context) {
     double baseWidth = 390;

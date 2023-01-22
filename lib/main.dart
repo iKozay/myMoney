@@ -3,7 +3,9 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
-import 'package:myapp/page-1/iphone-14-1.dart';
+import 'package:myapp/page-1/CategoryPage.dart';
+import 'package:myapp/page-1/Overview.dart';
+
 // import 'package:myapp/page-1/rectangle-3.dart';
 // import 'package:myapp/page-1/ellipse-1.dart';
 // import 'package:myapp/page-1/vector-1.dart';
@@ -17,7 +19,6 @@ import 'package:myapp/page-1/iphone-14-1.dart';
 // import 'package:myapp/page-1/edit-pQV.dart';
 // import 'package:myapp/page-1/remove-keq.dart';
 // import 'package:myapp/page-1/remove-rHs.dart';
-// import 'package:myapp/page-1/rayane.dart';
 // import 'package:myapp/page-1/iphone-14-3.dart';
 // import 'package:myapp/page-1/abood.dart';
 // import 'package:myapp/page-1/rayane-RZw.dart';
@@ -41,22 +42,57 @@ import 'package:myapp/page-1/iphone-14-1.dart';
 // import 'package:myapp/page-1/transaction-history-DYq.dart';
 // import 'package:myapp/page-1/rayane-2.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const HomePage());
 
-class MyApp extends StatelessWidget {
+class HomePage extends StatefulWidget {
+	const HomePage({super.key});
+
+	@override
+	State<StatefulWidget> createState() {
+		return _MyApp();
+	}
+}
+
+class _MyApp extends State<HomePage> {
+	int selectedPage = 0;
+
+	final _pageOptions = [
+		const CategoryPage(),
+		const Overview(),
+	];
+
 	@override
 	Widget build(BuildContext context) {
 	return MaterialApp(
 		title: 'Flutter',
 		debugShowCheckedModeBanner: false,
-		scrollBehavior: MyCustomScrollBehavior(),
 		theme: ThemeData(
 		primarySwatch: Colors.blue,
 		),
 		home: Scaffold(
-		body: SingleChildScrollView(
-			child: Scene(),
-		),
+			body: _pageOptions[selectedPage],
+			bottomNavigationBar: BottomNavigationBar(
+				items: const [
+					BottomNavigationBarItem(
+						icon: Icon(Icons.calculate, size: 30),
+						label: 'Calculator',
+					),
+					BottomNavigationBarItem(
+						icon: Icon(Icons.app_registration_rounded, size: 30),
+						label: 'Unit Convertor',
+					),
+				],
+				selectedItemColor: Colors.lightBlue,
+				elevation: 5.0,
+				unselectedItemColor: Colors.white,
+				currentIndex: selectedPage,
+				backgroundColor: const Color(0xff303030),
+				onTap: (index) {
+					setState(() {
+						selectedPage = index;
+					});
+				},
+			),
 		),
 	);
 	}
