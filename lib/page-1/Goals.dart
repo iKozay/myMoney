@@ -123,7 +123,7 @@ class GoalsState extends State<Goals> {
                                 onPressed: (BuildContext context) {
                                   setState(() {
                                     if(CategoriesModel.list.length==1) {
-                                      CategoriesModel(id: 0, name: 'No Category', percentage: 1);
+                                      CategoriesModel( 0, 'No Category',1);
                                     }
                                     CategoriesModel.delete(index);
                                   });

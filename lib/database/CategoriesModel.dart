@@ -5,24 +5,23 @@ class CategoriesModel{
 
 
   static void dummyData() {
-    for(int i=0;i<list.length;i++){
-      if(list.elementAt(i).id==0){
-        list.removeAt(i);
-        break;
-      }
-    }
 
-    CategoriesModel(id: 1, name: 'Food', percentage: 0.05);
-    CategoriesModel(id: 2, name: 'Transportation', percentage: 0.1);
-    CategoriesModel(id: 3, name: 'Entertainment', percentage: 0.15);
-    CategoriesModel(id: 4, name: 'Clothing', percentage: 0.2);
-    CategoriesModel(id: 5, name: 'Education', percentage: 0.5);
   }
 
-  static List<CategoriesModel> list = [];
+  static List<CategoriesModel> list = [
+  CategoriesModel(1, 'Food', 0.2, addToList: false),
+  CategoriesModel(2, 'Home appliances', 0.1, addToList: false),
+  CategoriesModel(3,'Wants',0.1, addToList: false),
+  CategoriesModel(4,'Rent',0.35, addToList: false),
+  CategoriesModel(5,'Transport',0.2, addToList: false),
+  CategoriesModel(6,'Others',0.05, addToList: false),
+
+  ];
   // constructor
-  CategoriesModel({required this.id,required this.name,required this.percentage}){
-    list.add(this);
+  CategoriesModel(this.id, this.name, this.percentage, {bool addToList=true}){
+    if(addToList){
+      list.add(this);
+    }
   }
   static void delete(int id){
     setPercentage(id, 0);

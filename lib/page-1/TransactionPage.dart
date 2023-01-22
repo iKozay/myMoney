@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/database/CategoriesModel.dart';
 import 'package:myapp/database/tblModel.dart';
+import 'package:myapp/page-1/Goals.dart';
 import 'package:myapp/utils.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 import 'EditTransaction.dart';
 
@@ -32,6 +35,31 @@ class TransactionPageState extends State<TransactionPage> {
           const Padding(
             padding: EdgeInsets.only(left:10, bottom:10, top: 20),
             child: Text("Transactions", style: TextStyle(color: Color(0xffffffff), fontSize: 26,),textAlign: TextAlign.left,),
+          ),
+          Center(
+            child: SfCircularChart(
+              series: <CircularSeries<ChartData, String>>[
+                DoughnutSeries<ChartData, String>(
+                    dataSource: getChartData(),
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.y,
+                    dataLabelMapper: (ChartData data, _) => data.x,
+                    radius: '60%',
+                    dataLabelSettings: const DataLabelSettings(
+                        isVisible: true,
+                        textStyle: TextStyle(color: Colors.white),
+                        // Avoid labels intersection
+                        labelIntersectAction: LabelIntersectAction.shift,
+                        labelPosition: ChartDataLabelPosition.outside,
+                        connectorLineSettings: ConnectorLineSettings(
+                            type: ConnectorType.curve, length: '25%')
+                    ),
+                    explode: true,
+                    explodeOffset: "28",
+                    explodeGesture: ActivationMode.singleTap
+                )
+              ] ,
+            ),
           ),
           Expanded(
             child: Container(
@@ -173,4 +201,23 @@ class TransactionPageState extends State<TransactionPage> {
         )
     );
   }
+
+  List<ChartData> getChartData(){
+    List<ChartData> chartData = <ChartData>[];
+    double sum =0.0;
+    for(var i = 0; i < tblModel.list.length; i++){
+      sum+=tblModel.list[i].price;
+    }
+    for (var i = 0; i < CategoriesModel.list.length; i++) {
+       double catSum=1;
+      for(var j = 0; j < tblModel.list.length; j++){
+        if(CategoriesModel.list.elementAt(i).id == tblModel.list.elementAt(j).categoryID){
+          catSum+=tblModel.list.elementAt(j).price;
+        }
+      }
+      chartData.add(ChartData(CategoriesModel.list[i].name, catSum/sum*100));
+    }
+    return chartData;
+  }
+
 }
