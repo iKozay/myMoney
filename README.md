@@ -1,6 +1,6 @@
 # penny.oink
 
-Considering the recent inflation, and the oingoing recession, it's more important than ever to keep our pockets and our wallets full. That is exactly what penny.oink is designed to do.
+Considering the recent inflation, and the ongoing recession, it's more important than ever to keep our pockets and our wallets full. That is exactly what penny.oink is designed to do.
 
 ## Features
 
