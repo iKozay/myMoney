@@ -63,6 +63,17 @@ class TransactionPageState extends State<TransactionPage> {
                         children: [
                           // A SlidableAction can have an icon and/or a label.
                           SlidableAction(
+                            onPressed: (BuildContext context) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => const EditTransaction()),
+                              );
+                            },
+                            backgroundColor: Color(0xFF21B7CA),
+                            foregroundColor: Colors.white,
+                            icon: Icons.edit,
+                          ),
+                          SlidableAction(
 
                             onPressed: (BuildContext context) {
                               setState(() {
@@ -74,17 +85,7 @@ class TransactionPageState extends State<TransactionPage> {
                             foregroundColor: Colors.white,
                             icon: Icons.delete,
                           ),
-                          SlidableAction(
-                            onPressed: (BuildContext context) {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => const EditTransaction()),
-                              );
-                            },
-                            backgroundColor: Color(0xFF21B7CA),
-                            foregroundColor: Colors.white,
-                            icon: Icons.edit,
-                          ),
+
                         ],
                       ), child:
                     Padding(

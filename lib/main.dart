@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/database/CategoriesModel.dart';
 import 'package:myapp/page-1/Goals.dart';
 import 'package:myapp/page-1/Overview1.dart';
 import 'package:myapp/page-1/stats_page.dart';
@@ -36,6 +37,7 @@ class _MyApp extends State<HomePage> {
 	@override
 	Widget build(BuildContext context) {
 		tblModel.dummyData();
+		//CategoriesModel.dummyData();
 	return MaterialApp(
 		title: 'MyMoney',
 		debugShowCheckedModeBanner: false,
