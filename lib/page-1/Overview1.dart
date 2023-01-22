@@ -22,14 +22,12 @@ class ChartData {
 }
 
 class OverviewState extends State<Overview1> {
-
   List<UncategorizedItem> items = [
     UncategorizedItem("Tim Hortons", "12 Jan", 15),
     UncategorizedItem("McDonalds", "12 Jan", 15),
     UncategorizedItem("Starbucks", "12 Jan", 15),
     UncategorizedItem("Starbucks", "12 Jan", 15),
     UncategorizedItem("Starbucks", "12 Jan", 15),
-
   ];
 
   @override
@@ -58,116 +56,103 @@ class OverviewState extends State<Overview1> {
     return Container(
       color: const Color(0xff252525),
       child: Column(
-          children: [
+        children: [
           Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-
-                children: [
-            const Padding(
-            padding: EdgeInsets.only(top: 40, bottom: 10, left: 20, right: 20),
-              child: Text(
-              'January 2022',
-              style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Padding(
+                padding:
+                    EdgeInsets.only(top: 40, bottom: 10, left: 20, right: 20),
+                child: Text(
+                  'January 2022',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
               ),
-            ),
-          ),
-
-
-            const Padding(
-              padding: EdgeInsets.only(left: 20, right: 20, bottom: 20),
+              const Padding(
+                padding: EdgeInsets.only(left: 20, right: 20, bottom: 20),
                 child: Text(
                   'Report',
                   style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
-                  ),
-
-
-
-            Center(
-              child: SfCircularChart(
-                series: <CircularSeries<ChartData, String>>[
-                  DoughnutSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    dataLabelMapper: (ChartData data, _) => data.x,
-                    radius: '60%',
-                    dataLabelSettings: DataLabelSettings(
-                    isVisible: true,
-                    // Avoid labels intersection
-                    labelIntersectAction: LabelIntersectAction.shift,
-                    labelPosition: ChartDataLabelPosition.outside,
-                    connectorLineSettings: ConnectorLineSettings(
-                    type: ConnectorType.curve, length: '25%')
-                    ),
-                    explode: true,
-                    explodeOffset: "28",
-                    explodeGesture: ActivationMode.singleTap
-                    )
-                ] ,
               ),
+              Center(
+                child: SfCircularChart(
+                  series: <CircularSeries<ChartData, String>>[
+                    DoughnutSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y,
+                        dataLabelMapper: (ChartData data, _) => data.x,
+                        radius: '60%',
+                        dataLabelSettings: DataLabelSettings(
+                            isVisible: true,
+                            // Avoid labels intersection
+                            labelIntersectAction: LabelIntersectAction.shift,
+                            labelPosition: ChartDataLabelPosition.outside,
+                            connectorLineSettings: ConnectorLineSettings(
+                                type: ConnectorType.curve, length: '25%')),
+                        explode: true,
+                        explodeOffset: "28",
+                        explodeGesture: ActivationMode.singleTap)
+                  ],
+                ),
+              ),
+              Center(
+                child: Container(
+                  padding: const EdgeInsets.all(25),
+                  child: const Text(
+                    'Recent Transactions',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
+                child: Container(
+                  padding: const EdgeInsets.only(
+                      left: 10.0, right: 10.0, bottom: 20.0, top: 30.0),
+                  height: 300,
+                  decoration: BoxDecoration(
+                    image: const DecorationImage(
+                      fit: BoxFit.cover,
+                      image: NetworkImage('Path to your image'),
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(30.0),),
+                    color: Color(0xff2F2F2F),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.5),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset:
+                            const Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: SingleChildScrollView(
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: uncategorizedListBuilder()),
+                  ),
+                ),
+              ),
+            ],
           ),
-
-
-            const Center(
-            child: Text(
-            'Recent Transactions',
-            style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-            ),
-            ),
-            heightFactor: 4,
-            ),
-
-            Positioned(
-            child: Container(
-            padding: const EdgeInsets.only(
-            left: 10.0, right: 10.0, bottom: 20.0, top: 30.0),
-            height: 300,
-            decoration: BoxDecoration(
-            image: const DecorationImage(
-            fit: BoxFit.cover,
-            image: NetworkImage('Path to your image'),
-            ),
-            borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30.0),
-            topRight: Radius.circular(30.0)),
-            color: Color(0xff2F2F2F),
-            boxShadow: [
-            BoxShadow(
-            color: Colors.black.withOpacity(0.5),
-            spreadRadius: 5,
-            blurRadius: 7,
-            offset: const Offset(0, 3), // changes position of shadow
-            ),
-            ],
-            ),
-
-            child: SingleChildScrollView(
-            child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-
-            children: uncategorizedListBuilder()
-            ),
-            ),
-            ),
-            ),
-            ],
-            ),
-            ],
-            ),
-            );
-    }
-
+        ],
+      ),
+    );
+  }
 
   List<Widget> uncategorizedListBuilder() {
     List<Widget> uncategorizedList = [];

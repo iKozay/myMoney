@@ -29,9 +29,9 @@ class TransactionPageState extends State<TransactionPage> {
       padding: const EdgeInsets.only(top:20,bottom: 20,right: 10,left: 10),
 
       width: double.infinity,
-        decoration: const BoxDecoration (
-                 color: Color(0xff252525),
-               ),
+      decoration: const BoxDecoration (
+         color: Color(0xff252525),
+       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -110,7 +110,6 @@ class TransactionPageState extends State<TransactionPage> {
 
                         // A pane can dismiss the Slidable.
                         dismissible: null,
-
 
                         // All actions are defined in the children parameter.
                         children: [

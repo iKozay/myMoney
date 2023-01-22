@@ -19,7 +19,6 @@ class ChartData {
   final double? y;
 // final Color color;
 }
-
 class GoalsState extends State<Goals> {
   List<ChartData> chartData = <ChartData>[];
 
