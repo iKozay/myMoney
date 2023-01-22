@@ -1,3 +1,5 @@
+![e0d5ecaa-5d2b-4781-9628-3e5f08b65119](https://user-images.githubusercontent.com/115915414/213925242-25fc3dae-ef0d-4c57-9e4f-d7619fe73d88.JPG)
+
 # penny.oink
 
 Considering the recent inflation, and the ongoing recession, it's more important than ever to keep our pockets and our wallets full. That is exactly what penny.oink is designed to do.
