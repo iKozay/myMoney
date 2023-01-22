@@ -20,8 +20,11 @@ class TransactionPage extends StatefulWidget {
 }
 
 class TransactionPageState extends State<TransactionPage> {
+  List<ChartData> chartData = <ChartData>[];
+
   @override
   Widget build(BuildContext context) {
+    getChartData();
     return Container(
       padding: const EdgeInsets.only(top:20,bottom: 20,right: 10,left: 10),
 
@@ -43,14 +46,15 @@ class TransactionPageState extends State<TransactionPage> {
                   child: IconButton(
                     icon: const Icon(Icons.add, size: 40,),
                     color: Colors.white,
-                    onPressed: () {
-                      setState(() {
+                    onPressed: () async{
                         tblModel newTransaction = tblModel(tblModel.list.last.id+1,"Transaction",0,DateTime.now(),1);
-                        Navigator.push(
+                        final value = await Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => EditTransaction(selectedTransaction: newTransaction,)),
                         );
-                      });
+                        setState(() {
+                          getChartData();
+                        });
                     },
                   ),
                 ),
@@ -61,7 +65,7 @@ class TransactionPageState extends State<TransactionPage> {
             child: SfCircularChart(
               series: <CircularSeries<ChartData, String>>[
                 DoughnutSeries<ChartData, String>(
-                    dataSource: getChartData(),
+                    dataSource: chartData,
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                     dataLabelMapper: (ChartData data, _) => data.x,
@@ -111,11 +115,14 @@ class TransactionPageState extends State<TransactionPage> {
                         children: [
                           // A SlidableAction can have an icon and/or a label.
                           SlidableAction(
-                            onPressed: (BuildContext context) {
-                              Navigator.push(
+                            onPressed: (BuildContext context) async {
+                              final value = await Navigator.push(
                                 context,
                                 MaterialPageRoute(builder: (context) => EditTransaction(selectedTransaction: tblModel.list[index])),
                               );
+                              setState(() {
+                                getChartData();
+                              });
                             },
                             backgroundColor: Color(0xFF21B7CA),
                             foregroundColor: Colors.white,
@@ -222,8 +229,8 @@ class TransactionPageState extends State<TransactionPage> {
     );
   }
 
-  List<ChartData> getChartData(){
-    List<ChartData> chartData = <ChartData>[];
+  void getChartData(){
+    chartData.clear();
     double sum =0.0;
     for(var i = 0; i < tblModel.list.length; i++){
       sum+=tblModel.list[i].price;
@@ -237,7 +244,6 @@ class TransactionPageState extends State<TransactionPage> {
       }
       chartData.add(ChartData(CategoriesModel.list[i].name, catSum/sum*100));
     }
-    return chartData;
   }
 
 }

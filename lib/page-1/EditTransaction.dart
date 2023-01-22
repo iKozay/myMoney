@@ -156,16 +156,27 @@ class EditTransactionState extends State<EditTransaction> {
                         Spacer(),
                         Text('Category', style:TextStyle(color: Color(0xffffffff,), fontSize: 18)),
                         Spacer(),
-                        DropdownButton(
-                            items: CategoriesModel.list.map((e) => DropdownMenuItem(
-                              child: Text(e.name, style: TextStyle(color: Color(0xffffffff), fontSize: 18)),
-                              value: e.id,
-                            )).toList(),
-                            onChanged: (value) {
-                              setState(() {
-                                widget.selectedTransaction.categoryID = value!.toInt();
-                              });
-                            },
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            color: Color(0xff353535),
+                          ),
+
+                          child: DropdownButton(
+                            dropdownColor: Color(0xff353535),
+                            value: widget.selectedTransaction.categoryID,
+                            style: TextStyle(color: Color(0xffffffff)),
+                            icon: Icon(Icons.arrow_drop_down, color: Color(0xffffffff),),
+                              items: CategoriesModel.list.map((e) => DropdownMenuItem(
+                                child: Text(e.name, style: TextStyle(color: Color(0xffffffff), fontSize: 18)),
+                                value: e.id,
+                              )).toList(),
+                              onChanged: (value) {
+                                setState(() {
+                                  widget.selectedTransaction.categoryID = value!.toInt();
+                                });
+                              },
+                          ),
                         ),
                         Spacer(),
                       ],
