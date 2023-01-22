@@ -21,8 +21,11 @@ class ChartData {
 }
 
 class GoalsState extends State<Goals> {
+  List<ChartData> chartData = <ChartData>[];
+
   @override
   Widget build(BuildContext context) {
+    getChartData();
     return Scaffold(
       body: Container(
         padding:
@@ -57,11 +60,15 @@ class GoalsState extends State<Goals> {
                         size: 40,
                       ),
                       color: Colors.white,
-                      onPressed: () {
-                        setState(() {
-                          //TODO add new category page
-                          CategoriesModel.dummyData();
-                        });
+                      onPressed: () async{
+                        CategoriesModel cat = CategoriesModel(CategoriesModel.list.last.id+1,"Category",0);
+                        final value = await Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => EditCategory(selectedCat: cat,)),
+                          );
+                       setState(() {
+                         getChartData();
+                       });
                       },
                     ),
                   ),
@@ -72,7 +79,7 @@ class GoalsState extends State<Goals> {
               child: SfCircularChart(
                 series: <CircularSeries<ChartData, String>>[
                   DoughnutSeries<ChartData, String>(
-                      dataSource: getChartData(),
+                      dataSource: chartData,
                       xValueMapper: (ChartData data, _) => data.x,
                       yValueMapper: (ChartData data, _) => data.y,
                       dataLabelMapper: (ChartData data, _) => data.x,
@@ -120,13 +127,16 @@ class GoalsState extends State<Goals> {
                                 children: [
                                   // A SlidableAction can have an icon and/or a label.
                                   SlidableAction(
-                                    onPressed: (BuildContext context) {
-                                      Navigator.push(
+                                    onPressed: (BuildContext context) async {
+                                      final value = await Navigator.push(
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const EditCategory()),
+                                                EditCategory(selectedCat: CategoriesModel.list.elementAt(index))),
                                       );
+                                      setState(() {
+                                        getChartData();
+                                      });
                                     },
                                     backgroundColor: Color(0xFF21B7CA),
                                     foregroundColor: Colors.white,
@@ -195,12 +205,11 @@ class GoalsState extends State<Goals> {
     );
   }
 
-  List<ChartData> getChartData() {
-    List<ChartData> chartData = <ChartData>[];
+  void getChartData() {
+    chartData.clear();
     for (var i = 0; i < CategoriesModel.list.length; i++) {
       chartData.add(ChartData(CategoriesModel.list[i].name,
           CategoriesModel.list[i].percentage * 100));
     }
-    return chartData;
   }
 }
