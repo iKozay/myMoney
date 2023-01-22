@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/database/tblModel.dart';
 import 'package:myapp/utils.dart';
 import 'package:myapp/page-1/CategoryPage.dart';
 
@@ -61,32 +62,52 @@ class _MyApp extends State<HomePage> {
 
 	@override
 	Widget build(BuildContext context) {
+		tblModel.dummyData();
 	return MaterialApp(
-		title: 'Flutter',
+		title: 'MyMoney',
 		debugShowCheckedModeBanner: false,
 		theme: ThemeData(
 		primarySwatch: Colors.blue,
+			//0xff3e5dfc
 		),
 		home: Scaffold(
-			body: _pageOptions[selectedPage],
+			body: _pageOptions[0],
 			bottomNavigationBar: BottomNavigationBar(
 				items: const [
 					BottomNavigationBarItem(
-						icon: Icon(Icons.calculate, size: 30),
-						label: 'Calculator',
+						backgroundColor: Color(0xff272727),
+						icon: Icon(Icons.pie_chart_rounded, size: 30),
+						label: '',
 					),
 					BottomNavigationBarItem(
-						icon: Icon(Icons.app_registration_rounded, size: 30),
-						label: 'Unit Convertor',
+						backgroundColor: Color(0xff272727),
+						icon: Icon(Icons.list_alt_rounded, size: 30),
+						label: '',
+					),
+					BottomNavigationBarItem(
+						backgroundColor: Color(0xff272727),
+						icon: Icon(Icons.track_changes, size: 30),
+						label: '',
+					),
+					BottomNavigationBarItem(
+						backgroundColor: Color(0xff272727),
+						icon: Icon(Icons.trending_up, size: 30),
+						label: '',
+					),
+					BottomNavigationBarItem(
+						backgroundColor: Color(0xff272727),
+						icon: Icon(Icons.more_horiz, size: 30),
+						label: '',
 					),
 				],
 				selectedItemColor: Colors.lightBlue,
 				elevation: 5.0,
 				unselectedItemColor: Colors.white,
 				currentIndex: selectedPage,
-				backgroundColor: const Color(0xff303030),
+				//backgroundColor: const Color(0xff303030),
 				onTap: (index) {
 					setState(() {
+						//TODO add page navigation
 						selectedPage = index;
 					});
 				},
