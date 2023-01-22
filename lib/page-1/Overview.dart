@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
 
 class Overview extends StatefulWidget {
@@ -18,42 +17,30 @@ class OverviewState extends State<Overview> {
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return Container(
+      padding: const EdgeInsets.only(top: 20),
       width: double.infinity,
       child: Container(
-        // rayane2paR (11:614)
         width: double.infinity,
         height: 844*fem,
-        decoration: BoxDecoration (
+        decoration: const BoxDecoration (
           color: Color(0xff252525),
         ),
         child: Stack(
           children: [
             Positioned(
               // frame7Uey (I11:674;11:145)
-              left: 66*fem,
               top: 109*fem,
               child: Container(
                 width: 421.31*fem,
                 height: 348.15*fem,
                 child: Container(
-                  // chart7kcV (I11:674;11:145;482:1114)
-                  padding: EdgeInsets.fromLTRB(71*fem, 64.5*fem, 71*fem, 115.02*fem),
-                  width: 258*fem,
+                  // width: 258*fem,
                   height: 258*fem,
-                  decoration: BoxDecoration (
-                    image: DecorationImage (
-                      fit: BoxFit.cover,
-                      image: AssetImage (
-                        'assets/page-1/images/ellipse.png',
-                      ),
-                    ),
-                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        // totalCso (I11:674;11:145;482:1114;482:481)
-                        margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 8.93*fem, 34.48*fem),
+                        margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 150.93*fem, 34.48*fem),
                         child: Text(
                           'You spent',
                           textAlign: TextAlign.center,
@@ -67,7 +54,6 @@ class OverviewState extends State<Overview> {
                         ),
                       ),
                       Center(
-                        // dTK (I11:674;11:145;482:1114;482:480)
                         child: Text(
                           '100\$',
                           textAlign: TextAlign.center,
@@ -138,15 +124,6 @@ class OverviewState extends State<Overview> {
                         ],
                       ),
                     ),
-                    Container(
-                      // ellipse26ff (26:162)
-                      width: 59*fem,
-                      height: 58*fem,
-                      child: Image.asset(
-                        'assets/page-1/images/ellipse-2.png',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
                   ],
                 ),
               ),
@@ -158,15 +135,6 @@ class OverviewState extends State<Overview> {
               child: Container(
                 width: 337*fem,
                 height: 1032*fem,
-                decoration: BoxDecoration (
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color(0x3f000000),
-                      offset: Offset(0*fem, 4*fem),
-                      blurRadius: 2*fem,
-                    ),
-                  ],
-                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -300,7 +268,6 @@ class OverviewState extends State<Overview> {
                                   child: Stack(
                                     children: [
                                       Positioned(
-                                        // benandjerrysm8q (17:161)
                                         left: 0*fem,
                                         top: 18*fem,
                                         child: Align(
@@ -315,7 +282,7 @@ class OverviewState extends State<Overview> {
                                                 fontSize: 18*ffem,
                                                 fontWeight: FontWeight.w600,
                                                 height: 1.2128206889*ffem/fem,
-                                                color: Color(0xffffffff),
+                                                color: const Color(0xffffffff),
                                               ),
                                             ),
                                           ),
@@ -362,119 +329,6 @@ class OverviewState extends State<Overview> {
                             ),
                           ),
                         ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
-              // bottomtabzpD (24:161)
-              left: 0*fem,
-              top: 780*fem,
-              child: Container(
-                width: 390*fem,
-                height: 64*fem,
-                decoration: BoxDecoration (
-                  gradient: LinearGradient (
-                    begin: Alignment(-0.494, 10.55),
-                    end: Alignment(0.494, -10.55),
-                    colors: <Color>[Color(0xff1f1f1f), Color(0xff2f2f2f)],
-                    stops: <double>[0, 1],
-                  ),
-                ),
-                child: Stack(
-                  children: [
-                    Positioned(
-                      // selectedtabmTb (24:154)
-                      left: 0*fem,
-                      top: 0*fem,
-                      child: Align(
-                        child: SizedBox(
-                          width: 80*fem,
-                          height: 64*fem,
-                          child: Container(
-                            decoration: BoxDecoration (
-                              gradient: LinearGradient (
-                                begin: Alignment(-0.494, 10.55),
-                                end: Alignment(0.494, -10.55),
-                                colors: <Color>[Color(0xff2f2f2f), Color(0xff2f2f2f)],
-                                stops: <double>[0, 1],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      // icongroupyZf (24:160)
-                      left: 23*fem,
-                      top: 12*fem,
-                      child: Container(
-                        width: 343*fem,
-                        height: 35*fem,
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              // pieicon2nq (24:159)
-                              width: 35*fem,
-                              height: 35*fem,
-                              child: Image.asset(
-                                'assets/page-1/images/pie-icon-HC9.png',
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 42*fem,
-                            ),
-                            Container(
-                              // categoriesicon6Xo (24:158)
-                              width: 35*fem,
-                              height: 35*fem,
-                              child: Image.asset(
-                                'assets/page-1/images/categories-icon-oE5.png',
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 42*fem,
-                            ),
-                            Container(
-                              // goalsiconxpu (24:157)
-                              width: 35*fem,
-                              height: 35*fem,
-                              child: Image.asset(
-                                'assets/page-1/images/goals-icon-WN9.png',
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 42*fem,
-                            ),
-                            Container(
-                              // statsiconF3K (24:155)
-                              width: 35*fem,
-                              height: 35*fem,
-                              child: Image.asset(
-                                'assets/page-1/images/stats-icon.png',
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 42*fem,
-                            ),
-                            Container(
-                              // settingsiconKJ5 (24:156)
-                              width: 35*fem,
-                              height: 35*fem,
-                              child: Image.asset(
-                                'assets/page-1/images/settings-icon.png',
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ],
-                        ),
                       ),
                     ),
                   ],
